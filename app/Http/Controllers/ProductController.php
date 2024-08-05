@@ -20,7 +20,9 @@ class ProductController extends Controller
     }
 
     public function exportProduct(Request $request){
-        return Excel::download(new ExportProduct, 'users.xlsx');
+        $date = date('Y-m-d_H-i-s');
+        $fileName = "products_{$date}.xlsx";
+        return Excel::download(new ExportProduct, $fileName);
     }
 
     public function index()
