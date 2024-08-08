@@ -10,7 +10,7 @@ use App\Models\Product;
 
 class ProductController extends Controller
 {
-    public function importView(Request $request){
+    public function importView(){
         return view('importFile');
     }
 
@@ -19,7 +19,7 @@ class ProductController extends Controller
         return redirect()->back();
     }
 
-    public function exportProduct(Request $request){
+    public function exportProduct(){
         $date = date('Y-m-d_H-i-s');
         $fileName = "products_{$date}.xlsx";
         return Excel::download(new ExportProduct, $fileName);

@@ -11,7 +11,7 @@
 <body>
     <div class="container mt-5 text-center">
         <h2 class="mb-4">
-        Lara Import/Export Excel - <a href="https://techvblogs.com/blog/laravel-import-export-excel-csv-file?ref=repo" target="_blank">TechvBlogs</a>
+        Lara Import/Export Excel 
         </h2>
         <form action="{{ route('import') }}" method="POST" enctype="multipart/form-data">
             @csrf
